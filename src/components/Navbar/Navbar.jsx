@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { company } from '../../data/company.js'
 import { Icon } from '../../utils/icons.jsx'
 import Button from '../Button/Button.jsx'
-import logo from '../../assets/logo.png'
+import rackywebImage from '../../assets/rackyweb.jpg'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -143,7 +143,7 @@ export default function Navbar() {
       "
     >
       <img
-        src="/rackyweb.jpg"
+        src={rackywebImage}
         alt="Rackyweb Technologies"
         className="w-9 h-9 object-contain"
       />
