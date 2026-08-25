@@ -9,6 +9,7 @@ import Team from './pages/Team/Team.jsx'
 import Academy from './pages/Academy/Academy.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 import { Icon } from './utils/icons.jsx'
+import Consultation from './pages/Consultation/Consultation.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/academy" element={<Academy />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/consultation" element={<Consultation />} />
           <Route
             path="*"
             element={
