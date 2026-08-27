@@ -31,7 +31,7 @@ function OrbitVisual() {
 
           <div className="absolute inset-2 rounded-[1.5rem] border border-electric-400/20" />
        <span className="relative font-display text-6xl md:text-7xl font-bold gradient-text block w-full h-full flex items-center justify-center p-4 bg-slate-900 rounded-2xl overflow-hidden">
-  <img src="public/rackyweb.jpg" alt="Rackyweb Logo" className="w-4/5 h-4/5 object-contain rounded-full" />
+  <img src="public/rackyweb.jpeg" alt="Rackyweb Logo" className="w-21/22 h-21/22 object-contain rounded-full" />
 </span>
 
 
@@ -141,7 +141,7 @@ export default function Home() {
         <div className="container-page section-pad relative grid lg:grid-cols-[1.05fr_.95fr] gap-12 xl:gap-20 items-center py-20 md:py-28">
 
 
-          {/* HERO TEXT */}
+          {/*  TEXT */}
 
           <div className="reveal">
 
