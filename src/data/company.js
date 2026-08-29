@@ -4,7 +4,7 @@ export const company = {
   tagline: 'Technology built for ideas that deserve to exist.',
   description:
     'Rackyweb Technologies is a technology company founded by Edward Prince Akachukwu, building modern websites, software, AI-powered solutions and digital products for businesses, organizations and individuals.',
-  email: 'hello@rackyweb@gmail.com',
+  email: 'hello.rackyweb@gmail.com',
   phone: '+234 708 780 6251',
   location: 'Nigeria',
   founder: 'Edward Prince Akachukwu',
