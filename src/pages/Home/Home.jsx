@@ -6,6 +6,8 @@ import { services } from '../../data/services.js'
 import { projects } from '../../data/projects.js'
 import { processSteps } from '../../data/technologies.js'
 
+import rackywebImage from '../../assets/rackyweb.jpg'
+
 import Button from '../../components/Button/Button.jsx'
 import Section from '../../components/Section/Section.jsx'
 import Counter from '../../components/Counter/Counter.jsx'
@@ -18,45 +20,60 @@ function OrbitVisual() {
   return (
     <div className="relative w-full max-w-[560px] aspect-square mx-auto">
 
+      {/* OUTER ORBIT */}
       <div className="absolute inset-[12%] rounded-full border border-white/[0.07]" />
 
+      {/* ELECTRIC ORBIT */}
       <div className="absolute inset-[23%] rounded-full border border-electric-400/20 animate-[spin_18s_linear_infinite]" />
 
+      {/* VIOLET ORBIT */}
       <div className="absolute inset-[34%] rounded-full border border-violet-400/20 animate-[spin_13s_linear_infinite_reverse]" />
 
+      {/* CENTER GLOW */}
       <div className="absolute inset-[43%] rounded-full bg-gradient-to-br from-electric-500 to-violet-500 blur-2xl opacity-30" />
 
+      {/* CENTER LOGO */}
       <div className="absolute inset-0 flex items-center justify-center">
+
         <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-[2rem] border border-white/15 bg-navy-900/90 backdrop-blur-xl shadow-[0_0_100px_rgba(76,141,255,0.2)] flex items-center justify-center">
 
-          <div className="absolute inset-2 rounded-[1.5rem] border border-electric-400/20" />
-       <span className="relative font-display text-6xl md:text-7xl font-bold gradient-text block w-full h-full flex items-center justify-center p-4 bg-slate-900 rounded-2xl overflow-hidden">
-  <img src="public/rackyweb.jpeg" alt="Rackyweb Logo" className="w-21/22 h-21/22 object-contain rounded-full" />
-</span>
+          {/* INNER BORDER */}
+          <div className="absolute inset-2 rounded-[1.5rem] border border-electric-400/20 pointer-events-none" />
 
+          {/* RACKYWEB IMAGE */}
+          <div className="relative w-full h-full p-4 flex items-center justify-center bg-slate-900 rounded-[1.8rem] overflow-hidden">
 
+            <img
+  src={rackywebImage}
+  alt="Rackyweb Technologies Logo"
+  className="w-full h-full object-contain rounded-full"
+/>
+
+          </div>
 
         </div>
+
       </div>
 
-
+      {/* AI ORBIT LABEL */}
       <div className="absolute top-[14%] right-[13%] glass-orbit">
         <span>AI</span>
       </div>
 
-
+      {/* WEB ORBIT LABEL */}
       <div className="absolute bottom-[19%] left-[10%] glass-orbit">
         <span>WEB</span>
       </div>
 
-
+      {/* CODE ORBIT LABEL */}
       <div className="absolute bottom-[10%] right-[24%] glass-orbit">
         <span>CODE</span>
       </div>
 
-
+      {/* FLOATING DOT */}
       <div className="absolute top-[31%] left-[7%] w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_18px_rgba(95,240,220,.8)]" />
 
+      {/* FLOATING DOT */}
       <div className="absolute bottom-[30%] right-[7%] w-2 h-2 rounded-full bg-electric-400 shadow-[0_0_18px_rgba(111,163,255,.8)]" />
 
     </div>
@@ -141,7 +158,7 @@ export default function Home() {
         <div className="container-page section-pad relative grid lg:grid-cols-[1.05fr_.95fr] gap-12 xl:gap-20 items-center py-20 md:py-28">
 
 
-          {/*  TEXT */}
+          {/* TEXT */}
 
           <div className="reveal">
 
@@ -490,178 +507,184 @@ export default function Home() {
 
 
 
-     {/* =========================
-    PROJECTS & PORTFOLIO
-========================== */}
+      {/* =========================
+          PROJECTS & PORTFOLIO
+      ========================== */}
 
-<section className="section-pad py-20 md:py-32">
+      <section className="section-pad py-20 md:py-32">
 
-  <div className="container-page">
-
-    <Section className="max-w-3xl mb-14">
-
-      <span className="eyebrow">
-        What We've Built
-      </span>
-
-      <h2 className="font-display font-semibold text-3xl md:text-5xl lg:text-6xl text-ink-50 mt-5 tracking-tight">
-        Real work.
-        <br />
-        <span className="gradient-text">
-          Real things we've built.
-        </span>
-      </h2>
-
-      <p className="text-ink-500 leading-8 mt-6 max-w-2xl">
-        Explore Rackyweb Technologies projects, digital products and
-        selected work from our founder and development journey.
-      </p>
-
-    </Section>
+        <div className="container-page">
 
 
-    {/* FOUNDER PORTFOLIO */}
+          <Section className="max-w-3xl mb-14">
 
-    <Section className="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-gradient-to-br from-electric-500/[0.08] via-white/[0.025] to-violet-500/[0.06] p-8 md:p-12 mb-6">
-
-      <div className="absolute -right-32 -top-32 w-96 h-96 rounded-full bg-electric-500/10 blur-[100px]" />
-
-      <div className="relative grid lg:grid-cols-[1fr_auto] gap-10 items-center">
-
-        <div>
-
-          <div className="flex items-center gap-3">
-
-            <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(95,240,220,.7)]" />
-
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-electric-400">
-              Founder Portfolio
+            <span className="eyebrow">
+              What We've Built
             </span>
 
-          </div>
+
+            <h2 className="font-display font-semibold text-3xl md:text-5xl lg:text-6xl text-ink-50 mt-5 tracking-tight">
+              Real work.
+              <br />
+              <span className="gradient-text">
+                Real things we've built.
+              </span>
+            </h2>
 
 
-          <h3 className="font-display font-semibold text-3xl md:text-4xl text-ink-50 mt-6">
-            Edward Prince Akachukwu
-          </h3>
-
-
-          <p className="text-electric-400 font-mono text-xs uppercase tracking-[0.16em] mt-3">
-            Founder • Developer • Technology Builder
-          </p>
-
-
-          <p className="text-ink-400 leading-8 mt-6 max-w-2xl">
-            Explore the personal portfolio of Rackyweb Technologies'
-            founder, including his development journey, technical skills,
-            projects, experiments and technology work.
-          </p>
-
-
-          <div className="flex flex-wrap gap-3 mt-8">
-
-            <Button
-              href="https://rackyweb-web.github.io/Edward-portfolio/"
-              variant="primary"
-            >
-              View Portfolio →
-            </Button>
-
-          </div>
-
-        </div>
-
-
-        <div className="hidden md:flex w-40 h-40 lg:w-48 lg:h-48 rounded-[2rem] border border-white/10 bg-navy-950/70 backdrop-blur-xl items-center justify-center">
-
-          <div className="text-center">
-
-            <span className="block font-display text-6xl font-bold gradient-text">
-              EP
-            </span>
-
-            <span className="block font-mono text-[9px] uppercase tracking-[0.2em] text-ink-600 mt-2">
-              Portfolio
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </Section>
-
-
-    {/* RACKYWEB PROJECTS */}
-
-    <div className="grid md:grid-cols-2 gap-6">
-
-      {projects
-        .filter((project) => !project.placeholder)
-        .slice(0, 6)
-        .map((project, index) => (
-
-          <Section
-            key={project.id || project.title}
-            delay={index * 80}
-          >
-
-            <ProjectCard
-              project={project}
-            />
+            <p className="text-ink-500 leading-8 mt-6 max-w-2xl">
+              Explore Rackyweb Technologies projects, digital products and
+              selected work from our founder and development journey.
+            </p>
 
           </Section>
 
-        ))}
 
-    </div>
+          {/* FOUNDER PORTFOLIO */}
 
+          <Section className="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-gradient-to-br from-electric-500/[0.08] via-white/[0.025] to-violet-500/[0.06] p-8 md:p-12 mb-6">
 
-    {/* NO PROJECTS FALLBACK */}
-
-    {projects.filter((project) => !project.placeholder).length === 0 && (
-
-      <div className="rounded-[2rem] border border-dashed border-white/10 bg-white/[0.015] py-20 px-6 text-center">
-
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-600">
-          works and projects released
-        </span>
-
-        <p className="text-ink-400 mt-4 max-w-lg mx-auto leading-7">
-          We're continuously building new websites, software and
-          technology projects.
-        </p>
-
-      </div>
-
-    )}
+            <div className="absolute -right-32 -top-32 w-96 h-96 rounded-full bg-electric-500/10 blur-[100px]" />
 
 
-    {/* VIEW ALL WORK */}
+            <div className="relative grid lg:grid-cols-[1fr_auto] gap-10 items-center">
 
-    <Section className="mt-10 flex flex-wrap gap-3">
+              <div>
 
-      <Button
-        to="/projects"
-        variant="outline"
-      >
-        Explore Rackyweb Projects →
-      </Button>
+                <div className="flex items-center gap-3">
 
-      <Button
-        href="https://rackyweb-web.github.io/Edward-portfolio/"
-        variant="ghost"
-      >
-        Visit Full Portfolio →
-      </Button>
-      
+                  <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(95,240,220,.7)]" />
 
-    </Section>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-electric-400">
+                    Founder Portfolio
+                  </span>
 
-  </div>
+                </div>
 
-</section>
+
+                <h3 className="font-display font-semibold text-3xl md:text-4xl text-ink-50 mt-6">
+                  Edward Prince Akachukwu
+                </h3>
+
+
+                <p className="text-electric-400 font-mono text-xs uppercase tracking-[0.16em] mt-3">
+                  Founder • Developer • Technology Builder
+                </p>
+
+
+                <p className="text-ink-400 leading-8 mt-6 max-w-2xl">
+                  Explore the personal portfolio of Rackyweb Technologies'
+                  founder, including his development journey, technical skills,
+                  projects, experiments and technology work.
+                </p>
+
+
+                <div className="flex flex-wrap gap-3 mt-8">
+
+                  <Button
+                    href="https://rackyweb-web.github.io/Edward-portfolio/"
+                    variant="primary"
+                  >
+                    View Portfolio →
+                  </Button>
+
+                </div>
+
+              </div>
+
+
+              <div className="hidden md:flex w-40 h-40 lg:w-48 lg:h-48 rounded-[2rem] border border-white/10 bg-navy-950/70 backdrop-blur-xl items-center justify-center">
+
+                <div className="text-center">
+
+                  <span className="block font-display text-6xl font-bold gradient-text">
+                    EP
+                  </span>
+
+                  <span className="block font-mono text-[9px] uppercase tracking-[0.2em] text-ink-600 mt-2">
+                    Portfolio
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </Section>
+
+
+          {/* RACKYWEB PROJECTS */}
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            {projects
+              .filter((project) => !project.placeholder)
+              .slice(0, 6)
+              .map((project, index) => (
+
+                <Section
+                  key={project.id || project.title}
+                  delay={index * 80}
+                >
+
+                  <ProjectCard
+                    project={project}
+                  />
+
+                </Section>
+
+              ))}
+
+          </div>
+
+
+          {/* NO PROJECTS FALLBACK */}
+
+          {projects.filter((project) => !project.placeholder).length === 0 && (
+
+            <div className="rounded-[2rem] border border-dashed border-white/10 bg-white/[0.015] py-20 px-6 text-center">
+
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-600">
+                works and projects released
+              </span>
+
+              <p className="text-ink-400 mt-4 max-w-lg mx-auto leading-7">
+                We're continuously building new websites, software and
+                technology projects.
+              </p>
+
+            </div>
+
+          )}
+
+
+          {/* VIEW ALL WORK */}
+
+          <Section className="mt-10 flex flex-wrap gap-3">
+
+            <Button
+              to="/projects"
+              variant="outline"
+            >
+              Explore Rackyweb Projects →
+            </Button>
+
+            <Button
+              href="https://rackyweb-web.github.io/Edward-portfolio/"
+              variant="ghost"
+            >
+              Visit Full Portfolio →
+            </Button>
+
+          </Section>
+
+        </div>
+
+      </section>
+
+
+
       {/* =========================
           PROCESS
       ========================== */}
