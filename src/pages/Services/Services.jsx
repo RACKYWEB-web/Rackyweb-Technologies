@@ -36,7 +36,7 @@ export default function Services() {
         <div className="container-page">
           <Section className="max-w-xl mb-14">
             <span className="eyebrow">Solutions Built Around Real Problems</span>
-            <h2 className="font-display font-semibold text-3xl md:text-4xl text-ink-50 mt-4">Not just services \u2014 solutions.</h2>
+            <h2 className="font-display font-semibold text-3xl md:text-4xl text-ink-50 mt-4">Not just services but solutions that beats outstanding.</h2>
           </Section>
           <div className="grid md:grid-cols-2 gap-5">
             {solutions.map((s, i) => (
