@@ -1,7 +1,7 @@
 // A small, dependency-free icon set — keeps the bundle light and the visual
 // language consistent (thin strokes, rounded joins) instead of pulling in
 // an icon library.
-const base = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round' }
+const base = { fill: 'none', stroke: 'white', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round' }
 
 export function Icon({ name, className = 'w-5 h-5' }) {
   const props = { viewBox: '0 0 24 24', className, ...base }

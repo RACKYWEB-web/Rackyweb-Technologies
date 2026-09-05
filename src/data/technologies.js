@@ -42,12 +42,12 @@ export const faqs = [
 
 export const academy = {
   name: 'Rackyweb Tech Academy',
-  intro: 'Practical technology education \u2014 delivered where students already are.',
+  intro: 'Practical technology education delivered where students already are.',
   description: 'Rackyweb Tech Academy provides hands-on technology education. Classes are conducted primarily through WhatsApp, keeping learning accessible and direct rather than locked behind a separate platform.',
   courses: [
-    { id: 'c1', title: '[Course Title]', level: 'Beginner', placeholder: true },
-    { id: 'c2', title: '[Course Title]', level: 'Intermediate', placeholder: true },
-    { id: 'c3', title: '[Course Title]', level: 'Advanced', placeholder: true },
+    { id: 'c1', title: '[Software development]', level: 'Beginner to advanced', placeholder: true },
+    { id: 'c2', title: '[Ai and machine learning]', level: 'Beginner to advanced', placeholder: true },
+    { id: 'c3', title: '[Git and github]', level: 'Beginner to advanced ', placeholder: true },
   ],
-  whatsappLink: '',
+  whatsappLink: 'https://wa.me/2347087806251',
 }

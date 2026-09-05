@@ -17,7 +17,7 @@ export default function Services() {
           <Section>
             <span className="eyebrow">What We Offer</span>
             <h1 className="font-display font-bold text-4xl md:text-6xl text-ink-50 mt-5 leading-tight">Services for real technology needs.</h1>
-            <p className="text-ink-400 text-lg leading-relaxed mt-6">Every service exists to solve a genuine problem \u2014 not to pad a list.</p>
+            <p className="text-ink-400 text-lg leading-relaxed mt-6">Every service exists to solve a genuine problem not to pad a list.</p>
           </Section>
         </div>
       </section>

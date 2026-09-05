@@ -40,7 +40,7 @@ function OrbitVisual() {
           {/* INNER BORDER */}
           <div className="absolute inset-2 rounded-[1.5rem] border border-electric-400/20 pointer-events-none" />
 
-          {/* RACKYWEB IMAGE */}
+          {/* RACKYWEB IMAGE */}.
           <div className="relative w-full h-full p-4 flex items-center justify-center bg-slate-900 rounded-[1.8rem] overflow-hidden">
 
             <img
@@ -331,8 +331,6 @@ export default function Home() {
             <span className="eyebrow">
               The Rackyweb Approach
             </span>
-
-
             <h2 className="font-display font-semibold text-3xl md:text-5xl leading-tight tracking-tight text-ink-50 mt-5">
               Not just another software company.
             </h2>
@@ -669,6 +667,7 @@ export default function Home() {
             >
               Explore Rackyweb Projects →
             </Button>
+            
 
             <Button
               href="https://rackyweb-web.github.io/Edward-portfolio/"

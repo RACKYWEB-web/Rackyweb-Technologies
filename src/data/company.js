@@ -14,10 +14,10 @@ export const company = {
   portfolio: 'https://rackyweb-web.github.io/Edward-portfolio/',
   social: {
     github: 'https://github.com/RACKYWEB-web',
-    twitter: '',
+    twitter: 'zethan edward',
     linkedin: '',
     instagram: '',
-    facebook: '',
+    facebook: 'racky web',
   },
 }
 
