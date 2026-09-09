@@ -10,23 +10,31 @@ import Academy from './pages/Academy/Academy.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 import { Icon } from './utils/icons.jsx'
 import Consultation from './pages/Consultation/Consultation.jsx'
+import Admin from './admin/Admin.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
+
   useEffect(() => {
     window.scrollTo({ top: 0 })
   }, [pathname])
+
   return null
 }
 
 function BackToTop() {
   const [visible, setVisible] = useState(false)
+
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 500)
+
     window.addEventListener('scroll', onScroll)
+
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
   if (!visible) return null
+
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -39,30 +47,46 @@ function BackToTop() {
 }
 
 export default function App() {
+  const location = useLocation()
+  const isAdmin = location.pathname === '/admin'
+
   return (
     <>
       <ScrollToTop />
-      <MainLayout>
+
+      {isAdmin ? (
+        // Admin page has no public website layout
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/academy" element={<Academy />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/consultation" element={<Consultation />} />
-          <Route
-            path="*"
-            element={
-              <div className="section-pad py-32 text-center">
-                <h1 className="font-display text-3xl text-ink-50">Page not found</h1>
-              </div>
-            }
-          />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
-      </MainLayout>
-      <BackToTop />
+      ) : (
+        // Normal public website
+        <MainLayout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/academy" element={<Academy />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/consultation" element={<Consultation />} />
+
+            <Route
+              path="*"
+              element={
+                <div className="section-pad py-32 text-center">
+                  <h1 className="font-display text-3xl text-ink-50">
+                    Page not found
+                  </h1>
+                </div>
+              }
+            />
+          </Routes>
+        </MainLayout>
+      )}
+
+      {!isAdmin && <BackToTop />}
     </>
   )
 }
