@@ -25,17 +25,43 @@ export default function Contact() {
     return Object.keys(next).length === 0
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!validate()) return
-    // Note: this form is front-end only right now \u2014 it does not send
-    // anywhere. Connect it to Supabase, Formspree, or another backend
-    // before relying on it in production.
-    setToast('Message received \u2014 thank you. We will follow up soon.')
+ const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  if (!validate()) return
+
+  try {
+    const response = await fetch('https://rackyweb-go-backened.onrender.com/api/v1/submit-message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        subject: `${form.service} - ${form.budget}`,
+        message: `${form.description}\n\nCompany / Organization: ${form.company}`,
+      }),
+    })
+
+    const data = await response.json()
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Failed to send message')
+    }
+
+    setToast('Message sent successfully! We will follow up soon.')
     setForm(initial)
+    setErrors({})
+
+    setTimeout(() => setToast(null), 4000)
+  } catch (error) {
+    console.error('Contact form error:', error)
+    setToast('Something went wrong. Please try again.')
     setTimeout(() => setToast(null), 4000)
   }
-
+}
   return (
     <div>
       <section className="section-pad pt-20 pb-16 md:pt-28">
