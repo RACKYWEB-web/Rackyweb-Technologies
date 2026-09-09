@@ -71,6 +71,7 @@ export default function App() {
             <Route path="/academy" element={<Academy />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/consultation" element={<Consultation />} />
+            <Route path="/admin" element={<Admin />} />
 
             <Route
               path="*"
