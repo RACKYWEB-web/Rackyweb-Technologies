@@ -6,7 +6,7 @@ import { services } from '../../data/services.js'
 import { projects } from '../../data/projects.js'
 import { processSteps } from '../../data/technologies.js'
 
-import rackywebImage from '../../assets/rackyweb.jpg'
+import rackywebImage from '../../assets/rackyweb.jpeg'
 
 import Button from '../../components/Button/Button.jsx'
 import Section from '../../components/Section/Section.jsx'

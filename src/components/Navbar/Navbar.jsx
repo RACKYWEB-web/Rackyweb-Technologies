@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { company } from '../../data/company.js'
 import { Icon } from '../../utils/icons.jsx'
 import Button from '../Button/Button.jsx'
-import rackywebImage from '../../assets/rackyweb.jpg'
+import rackywebImage from '../../assets/rackyweb.jpeg'
 
 const links = [
   { to: '/', label: 'Home' },
