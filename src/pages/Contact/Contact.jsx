@@ -231,16 +231,16 @@ const Contact = () => {
                     Select your budget
                   </option>
                   <option value="Below ₦100,000" className="bg-slate-900">
-                    Below ₦100,000
+                    under $500
                   </option>
                   <option value="₦100,000 - ₦250,000" className="bg-slate-900">
-                    ₦100,000 - ₦250,000
+                    $500 - $1,500
                   </option>
                   <option value="₦250,000 - ₦500,000" className="bg-slate-900">
-                    ₦250,000 - ₦500,000
+                    $1,500 - $3,000
                   </option>
                   <option value="₦500,000+" className="bg-slate-900">
-                    ₦500,000+
+                    $3,000+
                   </option>
                 </select>
               </div>
