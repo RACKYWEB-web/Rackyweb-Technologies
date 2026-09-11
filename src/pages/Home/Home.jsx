@@ -1,4 +1,6 @@
+
 import { useState } from 'react'
+
 import { Link } from 'react-router-dom'
 
 import { company, stats } from '../../data/company.js'
@@ -34,24 +36,23 @@ function OrbitVisual() {
 
       {/* CENTER LOGO */}
       <div className="absolute inset-0 flex items-center justify-center">
-
         <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-[2rem] border border-white/15 bg-navy-900/90 backdrop-blur-xl shadow-[0_0_100px_rgba(76,141,255,0.2)] flex items-center justify-center">
 
           <div className="absolute inset-2 rounded-[1.5rem] border border-electric-400/20 pointer-events-none" />
 
-          {/* RACKYWEB IMAGE */}
-          <div className="relative w-full h-full p-4 flex items-center justify-center bg-slate-900 rounded-[1.8rem] overflow-hidden">
+         {/* RACKYWEB IMAGE */}
+<div className="relative w-full h-full p-4 flex items-center justify-center bg-slate-900 rounded-[1.8rem] overflow-hidden">
 
-            <img
-              src={rackywebImage}
-              alt="Rackyweb Technologies Logo"
-              className="w-full h-full object-contain rounded-full"
-            />
+  <div className="rounded-full overflow-hidden">
+    <img
+      src={rackywebImage}
+      alt="Rackyweb Technologies Logo"
+      className="w-full h-full object-contain rounded-full"
+    />
+  </div>
 
-          </div>
-
+</div>
         </div>
-
       </div>
 
       {/* AI ORBIT LABEL */}
@@ -135,13 +136,13 @@ export default function Home() {
   const [activeService, setActiveService] = useState(null)
 
   return (
-    <div className="overflow-hidden bg-[#050814] text-ink-50">
+    <div className="relative overflow-hidden bg-[#040711] text-ink-50">
 
       {/* =========================
           HERO
       ========================== */}
 
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-[radial-gradient(circle_at_18%_15%,rgba(61,99,255,0.18),transparent_34%),radial-gradient(circle_at_84%_30%,rgba(124,58,237,0.13),transparent_32%),linear-gradient(135deg,#050814_0%,#08101f_52%,#050713_100%)]">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-[radial-gradient(circle_at_12%_10%,rgba(59,130,246,0.20),transparent_30%),radial-gradient(circle_at_88%_18%,rgba(124,58,237,0.16),transparent_30%),radial-gradient(circle_at_55%_85%,rgba(14,165,233,0.07),transparent_28%),linear-gradient(135deg,#040711_0%,#081020_45%,#060914_100%)]">
 
         <div className="absolute inset-0 grid-lines opacity-20 pointer-events-none" />
 
@@ -174,7 +175,6 @@ export default function Home() {
             <h1 className="font-display font-bold text-[clamp(3.2rem,7vw,6.8rem)] leading-[.92] tracking-[-0.06em] text-ink-50 mt-8 max-w-4xl">
 
               We build
-
               <br />
 
               <span className="gradient-text">
@@ -188,11 +188,14 @@ export default function Home() {
             </p>
 
             <p className="text-sm md:text-base leading-7 text-ink-500 mt-4 max-w-xl">
+
               <span className="text-ink-200">
                 Built for impact.
               </span>{' '}
+
               Designed for growth. We turn ambitious ideas into dependable
               digital products that help businesses move forward.
+
             </p>
 
             <div className="flex flex-wrap gap-3 mt-9">
@@ -249,7 +252,7 @@ export default function Home() {
           COMPANY POSITIONING
       ========================== */}
 
-      <section className="border-y border-white/[0.07] bg-[#0b1222]">
+      <section className="relative border-y border-white/[0.07] bg-[linear-gradient(90deg,#080d19_0%,#101a2d_50%,#080d19_100%)]">
 
         <div className="container-page section-pad py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 
@@ -257,9 +260,8 @@ export default function Home() {
 
             <span className="text-electric-400">
               01
-            </span>
-
-            {' '}— Based in Nigeria. Building for the world.
+            </span>{' '}
+            — Based in Nigeria. Building for the world.
 
           </p>
 
@@ -276,7 +278,7 @@ export default function Home() {
           STATS
       ========================== */}
 
-      <section className="section-pad py-20 md:py-28 bg-[#070b16] relative">
+      <section className="section-pad py-20 md:py-28 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.08),transparent_38%),linear-gradient(180deg,#060a14_0%,#080d19_50%,#050811_100%)] relative">
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.07),transparent_45%)] pointer-events-none" />
 
@@ -286,7 +288,7 @@ export default function Home() {
 
             <div
               key={stat.label}
-              className="bg-[#0b1220] px-6 py-8 md:px-8 md:py-10"
+              className="bg-[#0b1220]/90 px-6 py-8 md:px-8 md:py-10 backdrop-blur-sm"
             >
 
               <Counter
@@ -311,7 +313,7 @@ export default function Home() {
           INTRODUCTION
       ========================== */}
 
-      <section className="section-pad py-20 md:py-32 bg-[linear-gradient(180deg,#070b16_0%,#0b1020_52%,#080c17_100%)] border-y border-white/[0.045]">
+      <section className="section-pad py-20 md:py-32 bg-[radial-gradient(circle_at_82%_45%,rgba(59,130,246,0.06),transparent_30%),linear-gradient(180deg,#070b15_0%,#0c1322_52%,#070b14_100%)] border-y border-white/[0.045]">
 
         <div className="container-page grid lg:grid-cols-[.75fr_1.25fr] gap-12 lg:gap-24">
 
@@ -342,11 +344,14 @@ export default function Home() {
             </p>
 
             <p className="text-ink-400 leading-8 mt-5 max-w-2xl">
+
               <span className="text-ink-200">
                 Built with purpose. Delivered with precision.
               </span>{' '}
+
               Every solution is designed to create real value, strengthen
               your digital presence and give your business room to grow.
+
             </p>
 
             <Link
@@ -428,7 +433,7 @@ export default function Home() {
           FOUNDER
       ========================== */}
 
-      <section className="section-pad py-24 md:py-36 bg-[linear-gradient(180deg,#080c17_0%,#0d1221_50%,#080b14_100%)]">
+      <section className="section-pad py-24 md:py-36 bg-[radial-gradient(circle_at_15%_50%,rgba(37,99,235,0.07),transparent_28%),radial-gradient(circle_at_85%_50%,rgba(124,58,237,0.06),transparent_28%),linear-gradient(180deg,#070b14_0%,#0d1322_50%,#070a12_100%)]">
 
         <div className="container-page">
 
@@ -499,7 +504,7 @@ export default function Home() {
           PROJECTS & PORTFOLIO
       ========================== */}
 
-      <section className="section-pad py-20 md:py-32 bg-[#070a13] border-y border-white/[0.045]">
+      <section className="section-pad py-20 md:py-32 bg-[radial-gradient(circle_at_50%_15%,rgba(59,130,246,0.055),transparent_30%),linear-gradient(180deg,#060a12_0%,#090e19_50%,#050811_100%)] border-y border-white/[0.045]">
 
         <div className="container-page">
 
@@ -510,11 +515,14 @@ export default function Home() {
             </span>
 
             <h2 className="font-display font-semibold text-3xl md:text-5xl lg:text-6xl text-ink-50 mt-5 tracking-tight">
+
               Real work.
               <br />
+
               <span className="gradient-text">
                 Real things we've built.
               </span>
+
             </h2>
 
             <p className="text-ink-500 leading-8 mt-6 max-w-2xl">
@@ -730,7 +738,6 @@ export default function Home() {
             <h2 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[-0.04em] text-ink-50 mt-5">
 
               Have an idea?
-
               <br />
 
               <span className="gradient-text">
