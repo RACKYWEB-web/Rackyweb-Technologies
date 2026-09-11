@@ -37,17 +37,16 @@ function OrbitVisual() {
 
         <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-[2rem] border border-white/15 bg-navy-900/90 backdrop-blur-xl shadow-[0_0_100px_rgba(76,141,255,0.2)] flex items-center justify-center">
 
-          {/* INNER BORDER */}
           <div className="absolute inset-2 rounded-[1.5rem] border border-electric-400/20 pointer-events-none" />
 
-          {/* RACKYWEB IMAGE */}.
+          {/* RACKYWEB IMAGE */}
           <div className="relative w-full h-full p-4 flex items-center justify-center bg-slate-900 rounded-[1.8rem] overflow-hidden">
 
             <img
-  src={rackywebImage}
-  alt="Rackyweb Technologies Logo"
-  className="w-full h-full object-contain rounded-full"
-/>
+              src={rackywebImage}
+              alt="Rackyweb Technologies Logo"
+              className="w-full h-full object-contain rounded-full"
+            />
 
           </div>
 
@@ -104,7 +103,6 @@ function ServicePreview({ service, index, onOpen }) {
 
         </div>
 
-
         <div className="mt-12">
 
           <h3 className="font-display text-xl font-semibold text-ink-50">
@@ -116,7 +114,6 @@ function ServicePreview({ service, index, onOpen }) {
           </p>
 
         </div>
-
 
         <button
           type="button"
@@ -137,16 +134,14 @@ export default function Home() {
 
   const [activeService, setActiveService] = useState(null)
 
-
   return (
-    <div className="overflow-hidden">
-
+    <div className="overflow-hidden bg-[#050814] text-ink-50">
 
       {/* =========================
           HERO
       ========================== */}
 
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-[radial-gradient(circle_at_18%_15%,rgba(61,99,255,0.18),transparent_34%),radial-gradient(circle_at_84%_30%,rgba(124,58,237,0.13),transparent_32%),linear-gradient(135deg,#050814_0%,#08101f_52%,#050713_100%)]">
 
         <div className="absolute inset-0 grid-lines opacity-20 pointer-events-none" />
 
@@ -154,9 +149,7 @@ export default function Home() {
 
         <div className="absolute -bottom-48 -right-40 w-[36rem] h-[36rem] rounded-full bg-violet-500/10 blur-[120px] pointer-events-none" />
 
-
         <div className="container-page section-pad relative grid lg:grid-cols-[1.05fr_.95fr] gap-12 xl:gap-20 items-center py-20 md:py-28">
-
 
           {/* TEXT */}
 
@@ -172,13 +165,11 @@ export default function Home() {
 
               </span>
 
-
               <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ink-400">
                 {company.name}
               </span>
 
             </div>
-
 
             <h1 className="font-display font-bold text-[clamp(3.2rem,7vw,6.8rem)] leading-[.92] tracking-[-0.06em] text-ink-50 mt-8 max-w-4xl">
 
@@ -192,11 +183,17 @@ export default function Home() {
 
             </h1>
 
-
-            <p className="text-ink-400 text-base md:text-lg leading-8 mt-8 max-w-xl">
+            <p className="text-ink-300 text-base md:text-lg leading-8 mt-8 max-w-xl">
               {company.description}
             </p>
 
+            <p className="text-sm md:text-base leading-7 text-ink-500 mt-4 max-w-xl">
+              <span className="text-ink-200">
+                Built for impact.
+              </span>{' '}
+              Designed for growth. We turn ambitious ideas into dependable
+              digital products that help businesses move forward.
+            </p>
 
             <div className="flex flex-wrap gap-3 mt-9">
 
@@ -207,7 +204,6 @@ export default function Home() {
                 Start a Project →
               </Button>
 
-
               <Button
                 to="/projects"
                 variant="outline"
@@ -216,7 +212,6 @@ export default function Home() {
               </Button>
 
             </div>
-
 
             <div className="flex flex-wrap gap-x-8 gap-y-3 mt-9 text-xs text-ink-600">
 
@@ -236,16 +231,13 @@ export default function Home() {
 
           </div>
 
-
           {/* HERO VISUAL */}
 
           <div
             className="reveal"
             style={{ animationDelay: '160ms' }}
           >
-
             <OrbitVisual />
-
           </div>
 
         </div>
@@ -253,12 +245,11 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           COMPANY POSITIONING
       ========================== */}
 
-      <section className="border-y border-white/[0.06] bg-white/[0.015]">
+      <section className="border-y border-white/[0.07] bg-[#0b1222]">
 
         <div className="container-page section-pad py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 
@@ -272,7 +263,6 @@ export default function Home() {
 
           </p>
 
-
           <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-600">
             Digital products • intelligent systems • human experiences
           </p>
@@ -282,12 +272,13 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           STATS
       ========================== */}
 
-      <section className="section-pad py-20 md:py-28">
+      <section className="section-pad py-20 md:py-28 bg-[#070b16] relative">
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(37,99,235,0.07),transparent_45%)] pointer-events-none" />
 
         <div className="container-page grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-3xl overflow-hidden border border-white/[0.06]">
 
@@ -295,7 +286,7 @@ export default function Home() {
 
             <div
               key={stat.label}
-              className="bg-navy-950 px-6 py-8 md:px-8 md:py-10"
+              className="bg-[#0b1220] px-6 py-8 md:px-8 md:py-10"
             >
 
               <Counter
@@ -316,39 +307,47 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           INTRODUCTION
       ========================== */}
 
-      <section className="section-pad py-20 md:py-32">
+      <section className="section-pad py-20 md:py-32 bg-[linear-gradient(180deg,#070b16_0%,#0b1020_52%,#080c17_100%)] border-y border-white/[0.045]">
 
         <div className="container-page grid lg:grid-cols-[.75fr_1.25fr] gap-12 lg:gap-24">
-
 
           <Section>
 
             <span className="eyebrow">
               The Rackyweb Approach
             </span>
+
             <h2 className="font-display font-semibold text-3xl md:text-5xl leading-tight tracking-tight text-ink-50 mt-5">
               Not just another software company.
             </h2>
 
           </Section>
 
-
           <Section delay={100}>
 
             <p className="text-xl md:text-2xl leading-9 text-ink-300">
-              We take ideas, problems and opportunities and turn them into useful digital products.
+              We take ideas, problems and opportunities and turn them into
+              useful digital products.
             </p>
-
 
             <p className="text-ink-500 leading-8 mt-6 max-w-2xl">
-              From a business that needs its first serious website to an organization that needs custom software or intelligent automation, Rackyweb Technologies focuses on technology that actually has a purpose.
+              From a business that needs its first serious website to an
+              organization that needs custom software or intelligent
+              automation, Rackyweb Technologies focuses on technology that
+              actually has a purpose.
             </p>
 
+            <p className="text-ink-400 leading-8 mt-5 max-w-2xl">
+              <span className="text-ink-200">
+                Built with purpose. Delivered with precision.
+              </span>{' '}
+              Every solution is designed to create real value, strengthen
+              your digital presence and give your business room to grow.
+            </p>
 
             <Link
               to="/about"
@@ -364,15 +363,13 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           SERVICES
       ========================== */}
 
-      <section className="section-pad py-20 md:py-32 bg-navy-900/40 border-y border-white/[0.06]">
+      <section className="section-pad py-20 md:py-32 bg-[radial-gradient(circle_at_15%_20%,rgba(37,99,235,0.10),transparent_30%),linear-gradient(135deg,#0b1222_0%,#101827_52%,#080e1b_100%)] border-y border-white/[0.06]">
 
         <div className="container-page">
-
 
           <Section className="max-w-2xl mb-12">
 
@@ -380,18 +377,21 @@ export default function Home() {
               Capabilities
             </span>
 
-
             <h2 className="font-display font-semibold text-3xl md:text-5xl text-ink-50 mt-5">
               Technology with a reason behind it.
             </h2>
 
-
             <p className="text-ink-500 leading-7 mt-5">
-              Our work sits where software, design and intelligent technology meet.
+              Our work sits where software, design and intelligent technology
+              meet.
+            </p>
+
+            <p className="text-ink-400 leading-7 mt-4">
+              We don't build digital products simply to look good —
+              we build them to help your business perform, compete and grow.
             </p>
 
           </Section>
-
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
@@ -407,7 +407,6 @@ export default function Home() {
             ))}
 
           </div>
-
 
           <div className="mt-8">
 
@@ -425,23 +424,19 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           FOUNDER
       ========================== */}
 
-      <section className="section-pad py-24 md:py-36">
+      <section className="section-pad py-24 md:py-36 bg-[linear-gradient(180deg,#080c17_0%,#0d1221_50%,#080b14_100%)]">
 
         <div className="container-page">
 
-
-          <Section className="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-gradient-to-br from-white/[0.045] to-transparent p-8 md:p-14">
+          <Section className="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(135deg,rgba(59,130,246,0.08),rgba(255,255,255,0.025)_48%,rgba(124,58,237,0.07))] p-8 md:p-14">
 
             <div className="absolute -right-32 -top-32 w-96 h-96 rounded-full bg-violet-500/10 blur-[100px]" />
 
-
             <div className="relative grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
-
 
               <div className="w-28 h-28 md:w-36 md:h-36 rounded-[2rem] border border-white/10 bg-gradient-to-br from-electric-500/20 via-violet-500/15 to-transparent flex items-center justify-center">
 
@@ -451,28 +446,25 @@ export default function Home() {
 
               </div>
 
-
               <div>
 
                 <span className="eyebrow">
                   Founder
                 </span>
 
-
                 <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink-50 mt-3">
                   Edward Prince Akachukwu
                 </h2>
-
 
                 <p className="text-electric-400 font-mono text-xs uppercase tracking-[0.15em] mt-2">
                   Founder & Technology Developer
                 </p>
 
-
                 <p className="text-ink-400 leading-7 mt-5 max-w-3xl">
-                  Rackyweb Technologies was founded with a simple ambition: build technology that solves real problems and make those solutions accessible beyond borders.
+                  Rackyweb Technologies was founded with a simple ambition:
+                  build technology that solves real problems and make those
+                  solutions accessible beyond borders.
                 </p>
-
 
                 <div className="flex flex-wrap gap-3 mt-7">
 
@@ -482,7 +474,6 @@ export default function Home() {
                   >
                     View Founder Portfolio
                   </Button>
-
 
                   <Button
                     href={company.whatsapp}
@@ -504,22 +495,19 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           PROJECTS & PORTFOLIO
       ========================== */}
 
-      <section className="section-pad py-20 md:py-32">
+      <section className="section-pad py-20 md:py-32 bg-[#070a13] border-y border-white/[0.045]">
 
         <div className="container-page">
-
 
           <Section className="max-w-3xl mb-14">
 
             <span className="eyebrow">
               What We've Built
             </span>
-
 
             <h2 className="font-display font-semibold text-3xl md:text-5xl lg:text-6xl text-ink-50 mt-5 tracking-tight">
               Real work.
@@ -528,7 +516,6 @@ export default function Home() {
                 Real things we've built.
               </span>
             </h2>
-
 
             <p className="text-ink-500 leading-8 mt-6 max-w-2xl">
               Explore Rackyweb Technologies projects, digital products and
@@ -540,10 +527,9 @@ export default function Home() {
 
           {/* FOUNDER PORTFOLIO */}
 
-          <Section className="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-gradient-to-br from-electric-500/[0.08] via-white/[0.025] to-violet-500/[0.06] p-8 md:p-12 mb-6">
+          <Section className="relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[linear-gradient(135deg,rgba(59,130,246,0.10),rgba(255,255,255,0.025)_48%,rgba(124,58,237,0.08))] p-8 md:p-12 mb-6">
 
             <div className="absolute -right-32 -top-32 w-96 h-96 rounded-full bg-electric-500/10 blur-[100px]" />
-
 
             <div className="relative grid lg:grid-cols-[1fr_auto] gap-10 items-center">
 
@@ -559,23 +545,19 @@ export default function Home() {
 
                 </div>
 
-
                 <h3 className="font-display font-semibold text-3xl md:text-4xl text-ink-50 mt-6">
                   Edward Prince Akachukwu
                 </h3>
-
 
                 <p className="text-electric-400 font-mono text-xs uppercase tracking-[0.16em] mt-3">
                   Founder • Developer • Technology Builder
                 </p>
 
-
                 <p className="text-ink-400 leading-8 mt-6 max-w-2xl">
                   Explore the personal portfolio of Rackyweb Technologies'
-                  founder, including his development journey, technical skills,
-                  projects, experiments and technology work.
+                  founder, including his development journey, technical
+                  skills, projects, experiments and technology work.
                 </p>
-
 
                 <div className="flex flex-wrap gap-3 mt-8">
 
@@ -589,7 +571,6 @@ export default function Home() {
                 </div>
 
               </div>
-
 
               <div className="hidden md:flex w-40 h-40 lg:w-48 lg:h-48 rounded-[2rem] border border-white/10 bg-navy-950/70 backdrop-blur-xl items-center justify-center">
 
@@ -667,7 +648,6 @@ export default function Home() {
             >
               Explore Rackyweb Projects →
             </Button>
-            
 
             <Button
               href="https://rackyweb-web.github.io/Edward-portfolio/"
@@ -683,15 +663,13 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           PROCESS
       ========================== */}
 
-      <section className="section-pad py-20 md:py-32 bg-navy-900/40 border-y border-white/[0.06]">
+      <section className="section-pad py-20 md:py-32 bg-[radial-gradient(circle_at_90%_10%,rgba(91,33,182,0.14),transparent_28%),linear-gradient(135deg,#0b1325_0%,#10192b_50%,#0a101e_100%)] border-y border-white/[0.07]">
 
         <div className="container-page">
-
 
           <Section className="max-w-xl mb-12">
 
@@ -699,13 +677,16 @@ export default function Home() {
               How We Work
             </span>
 
-
             <h2 className="font-display font-semibold text-3xl md:text-5xl text-ink-50 mt-5">
               From idea to something real.
             </h2>
 
-          </Section>
+            <p className="text-ink-400 leading-7 mt-5">
+              A clear process. Thoughtful execution. Technology built around
+              what your business actually needs.
+            </p>
 
+          </Section>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
 
@@ -732,22 +713,19 @@ export default function Home() {
       </section>
 
 
-
       {/* =========================
           FINAL CTA
       ========================== */}
 
-      <section className="section-pad py-28 md:py-40">
+      <section className="section-pad py-28 md:py-40 bg-[radial-gradient(circle_at_50%_45%,rgba(59,130,246,0.16),transparent_32%),radial-gradient(circle_at_78%_20%,rgba(124,58,237,0.12),transparent_28%),linear-gradient(135deg,#050711_0%,#090e1b_50%,#05060d_100%)] border-t border-white/[0.06]">
 
         <div className="container-page text-center">
-
 
           <Section>
 
             <span className="eyebrow">
               Start Something
             </span>
-
 
             <h2 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl tracking-[-0.04em] text-ink-50 mt-5">
 
@@ -761,11 +739,11 @@ export default function Home() {
 
             </h2>
 
-
             <p className="text-ink-500 max-w-xl mx-auto leading-7 mt-6">
-              Tell us what you're trying to create, improve or automate. We'll help turn the idea into a practical digital solution.
+              Tell us what you're trying to create, improve or automate.
+              We'll help turn the idea into a practical digital solution
+              built for real-world results.
             </p>
-
 
             <div className="flex justify-center flex-wrap gap-3 mt-9">
 
@@ -775,7 +753,6 @@ export default function Home() {
               >
                 Start a Project →
               </Button>
-
 
               <Button
                 href={company.whatsapp}
@@ -791,7 +768,6 @@ export default function Home() {
         </div>
 
       </section>
-
 
 
       {/* =========================
@@ -811,16 +787,13 @@ export default function Home() {
               Service
             </span>
 
-
             <h3 className="font-display font-semibold text-2xl text-ink-50 mt-3">
               {activeService.title}
             </h3>
 
-
             <p className="text-ink-400 leading-7 mt-5">
               {activeService.details || activeService.short}
             </p>
-
 
             <Button
               to="/contact"

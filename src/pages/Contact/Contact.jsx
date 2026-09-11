@@ -10,6 +10,7 @@ const Contact = () => {
     service: '',
     budget: '',
     description: '',
+    'country/city': '',
   })
 
   const [status, setStatus] = useState('')
@@ -40,7 +41,7 @@ const Contact = () => {
             email: form.email,
             phone: form.phone,
             subject: `${form.service} - ${form.budget}`,
-            message: `${form.description}\n\nCompany / Organization: ${form.company}`,
+            message: `${form.description}\n\nCompany / Organization: ${form.company}\n\nCountry / City: ${form['country/city']}`,
           }),
         }
       )
@@ -61,6 +62,7 @@ const Contact = () => {
         service: '',
         budget: '',
         description: '',
+        'country/city': '',
       })
     } catch (error) {
       console.error('Contact form error:', error)
