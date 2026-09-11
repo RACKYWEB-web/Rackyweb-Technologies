@@ -246,6 +246,23 @@ const Contact = () => {
               </div>
             </div>
 
+             {/* Country / City (ADDED) */}
+            <div className="group">
+              <label className="mb-2 block text-xs font-medium text-slate-400 transition-colors group-focus-within:text-violet-300">
+                Country / City
+              </label>
+              <input
+                type="text"
+                name="country/city"
+                placeholder="e.g. california, USA"
+                value={form['country/city']}
+                onChange={handleChange}
+                required
+                className={inputClass}
+              />
+            </div>
+
+
             {/* Description */}
             <div className="group">
               <label className="mb-2 block text-xs font-medium text-slate-400 transition-colors group-focus-within:text-violet-300">
