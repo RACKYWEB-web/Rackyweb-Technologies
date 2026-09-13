@@ -110,7 +110,7 @@ const Contact = () => {
 
             {/* Name + Email */}
             <div className="grid gap-5 md:grid-cols-2">
-              <div className="group">
+              <div className="group">+
                 <label className="mb-2 block text-xs font-medium text-slate-400 transition-colors group-focus-within:text-violet-300">
                   Your Name
                 </label>
