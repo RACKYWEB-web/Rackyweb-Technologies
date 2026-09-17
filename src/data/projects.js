@@ -41,11 +41,11 @@ export const projects = [
   },
   {
     id: 'proj-5',
-    title: '[Project Name]',
-    category: 'Business',
-    description: '[Add a short description of this business platform once available.]',
-    technologies: ['React', 'Node.js'],
-    link: '',
+    title: '[surprise birthday project]',
+    category: 'web',
+    description: '[A surprise birthday project for an honored man.]',
+    technologies: ['React'],
+    link: 'https://sir-david-birthday.vercel.app/',
     placeholder: true,
   },
   {

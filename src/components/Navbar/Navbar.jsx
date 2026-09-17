@@ -72,21 +72,15 @@ export default function Navbar() {
       className={`
         fixed top-0 left-0 right-0 z-50
         transition-all duration-500
-        ${
-          scrolled
-            ? 'pt-3'
-            : 'pt-4'
-        }
+        ${scrolled ? 'pt-3' : 'pt-4'}
       `}
     >
-
       <div
-        className={`
+        className="
           container-page section-pad
           transition-all duration-500
-        `}
+        "
       >
-
         <div
           className={`
             relative
@@ -103,72 +97,65 @@ export default function Navbar() {
             }
           `}
         >
-
           {/* =========================
               BRAND
           ========================== */}
 
-       <Link
-  to="/"
-  className="group flex items-center gap-3 min-w-0"
-  aria-label={`${company.name} home`}
->
-  <div className="relative">
+          <Link
+            to="/"
+            className="group flex items-center gap-3 min-w-0"
+            aria-label={`${company.name} home`}
+          >
+            <div className="relative">
+              <div
+                className="
+                  absolute inset-0
+                  rounded-xl
+                  bg-electric-500/30
+                  blur-xl
+                  opacity-0
+                  group-hover:opacity-100
+                  transition-opacity duration-500
+                "
+              />
 
-    <div
-      className="
-        absolute inset-0
-        rounded-xl
-        bg-electric-500/30
-        blur-xl
-        opacity-0
-        group-hover:opacity-100
-        transition-opacity duration-500
-      "
-    />
+              <div
+                className="
+                  relative
+                  w-11 h-11
+                  rounded-xl
+                  flex items-center justify-center
+                  border border-white/10
+                  bg-white/[0.03]
+                  shadow-[0_0_25px_rgba(76,141,255,0.18)]
+                  transition-all duration-300
+                  group-hover:scale-105
+                  group-hover:border-electric-400/30
+                  overflow-hidden
+                "
+              >
+                <img
+                  src={rackywebImage}
+                  alt="Rackyweb Technologies"
+                  className="w-9 h-9 object-contain"
+                />
+              </div>
+            </div>
 
-    <div
-      className="
-        relative
-        w-11 h-11
-        rounded-xl
-        flex items-center justify-center
-        border border-white/10
-        bg-white/[0.03]
-        shadow-[0_0_25px_rgba(76,141,255,0.18)]
-        transition-all duration-300
-        group-hover:scale-105
-        group-hover:border-electric-400/30
-        overflow-hidden
-      "
-    >
-      <img
-        src={rackywebImage}
-        alt="Rackyweb Technologies"
-        className="w-9 h-9 object-contain"
-      />
-    </div>
+            <div className="hidden sm:block min-w-0">
+              <div className="font-display font-semibold text-[15px] text-ink-50 tracking-tight leading-none">
+                {company.shortName}
+              </div>
 
-  </div>
+              <div className="flex items-center gap-1.5 mt-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(95,240,220,.8)]" />
 
-  <div className="hidden sm:block min-w-0">
-
-    <div className="font-display font-semibold text-[15px] text-ink-50 tracking-tight leading-none">
-      {company.shortName}
-    </div>
-
-    <div className="flex items-center gap-1.5 mt-1.5">
-
-      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(95,240,220,.8)]" />
-
-      <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-ink-600">
-        Technology Company
-      </span>
-
-    </div>
-
-  </div>
-</Link>
+                <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-ink-600">
+                  Technology Company
+                </span>
+              </div>
+            </div>
+          </Link>
 
           {/* =========================
               DESKTOP NAVIGATION
@@ -178,9 +165,7 @@ export default function Navbar() {
             className="hidden lg:flex items-center gap-1"
             aria-label="Primary"
           >
-
             {links.slice(0, 3).map((link) => (
-
               <NavLink
                 key={link.to}
                 to={link.to}
@@ -199,23 +184,21 @@ export default function Navbar() {
                   }
                 `}
               >
+                {({ isActive }) => (
+                  <>
+                    {link.label}
 
-                {link.label}
-
-                <NavLink
-                  to={link.to}
-                  end={link.to === '/'}
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'absolute left-1/2 -bottom-[1px] -translate-x-1/2 w-5 h-[2px] rounded-full bg-electric-400 shadow-[0_0_10px_rgba(76,141,255,.8)]'
-                      : 'hidden'
-                  }
-                />
-
+                    <span
+                      className={
+                        isActive
+                          ? 'absolute left-1/2 -bottom-[1px] -translate-x-1/2 w-5 h-[2px] rounded-full bg-electric-400 shadow-[0_0_10px_rgba(76,141,255,.8)]'
+                          : 'hidden'
+                      }
+                    />
+                  </>
+                )}
               </NavLink>
-
             ))}
-
 
             {/* PROJECTS DROPDOWN */}
 
@@ -224,7 +207,6 @@ export default function Navbar() {
               onMouseEnter={() => setProjectsOpen(true)}
               onMouseLeave={() => setProjectsOpen(false)}
             >
-
               <button
                 type="button"
                 onClick={() => setProjectsOpen((value) => !value)}
@@ -242,7 +224,6 @@ export default function Navbar() {
                   }
                 `}
               >
-
                 Projects
 
                 <span
@@ -254,9 +235,7 @@ export default function Navbar() {
                 >
                   ▼
                 </span>
-
               </button>
-
 
               <div
                 className={`
@@ -273,11 +252,8 @@ export default function Navbar() {
                   }
                 `}
               >
-
                 <div className="w-[340px] rounded-2xl border border-white/[0.10] bg-navy-950/95 backdrop-blur-2xl shadow-[0_25px_80px_rgba(0,0,0,0.55)] p-2">
-
                   <div className="px-4 py-3 border-b border-white/[0.06]">
-
                     <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-electric-400">
                       Our Work
                     </span>
@@ -285,23 +261,17 @@ export default function Navbar() {
                     <p className="text-xs text-ink-500 mt-1">
                       Explore what Rackyweb has built.
                     </p>
-
                   </div>
 
-
                   <div className="py-2">
-
                     {projectLinks.map((project) => {
-
                       const content = (
                         <div className="group/item flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-white/[0.05] transition-colors">
-
                           <div className="w-9 h-9 rounded-lg border border-white/10 bg-white/[0.03] flex items-center justify-center text-electric-400 group-hover/item:border-electric-400/30 transition-colors">
                             ↗
                           </div>
 
                           <div className="flex-1">
-
                             <div className="text-sm font-medium text-ink-200 group-hover/item:text-ink-50 transition-colors">
                               {project.label}
                             </div>
@@ -309,13 +279,11 @@ export default function Navbar() {
                             <div className="text-[11px] text-ink-600 mt-0.5">
                               {project.description}
                             </div>
-
                           </div>
 
                           <span className="text-ink-700 group-hover/item:text-electric-400 transition-colors">
                             →
                           </span>
-
                         </div>
                       )
 
@@ -341,18 +309,12 @@ export default function Navbar() {
                         </Link>
                       )
                     })}
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
 
-
             {links.slice(4).map((link) => (
-
               <NavLink
                 key={link.to}
                 to={link.to}
@@ -370,13 +332,9 @@ export default function Navbar() {
                   }
                 `}
               >
-
                 {link.label}
-
               </NavLink>
-
             ))}
-
 
             {/* CONSULTATION */}
 
@@ -399,24 +357,19 @@ export default function Navbar() {
             >
               Consultation
             </NavLink>
-
           </nav>
-
 
           {/* =========================
               DESKTOP CTA
           ========================== */}
 
           <div className="hidden lg:flex items-center gap-3">
-
             <div className="hidden xl:flex items-center gap-2 mr-1">
-
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(95,240,220,.8)]" />
 
               <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-ink-600">
                 Available
               </span>
-
             </div>
 
             <Button
@@ -426,9 +379,7 @@ export default function Navbar() {
             >
               Start a Project →
             </Button>
-
           </div>
-
 
           {/* =========================
               MOBILE MENU BUTTON
@@ -451,16 +402,12 @@ export default function Navbar() {
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
           >
-
             <Icon
               name={open ? 'close' : 'menu'}
               className="w-5 h-5"
             />
-
           </button>
-
         </div>
-
 
         {/* =========================
             MOBILE NAVIGATION
@@ -478,7 +425,6 @@ export default function Navbar() {
             }
           `}
         >
-
           <nav
             className="
               rounded-2xl
@@ -490,9 +436,7 @@ export default function Navbar() {
             "
             aria-label="Mobile"
           >
-
             {links.map((link) => (
-
               <NavLink
                 key={link.to}
                 to={link.to}
@@ -511,47 +455,38 @@ export default function Navbar() {
                   }
                 `}
               >
-
                 {link.label}
 
                 <span className="text-ink-700">
                   →
                 </span>
-
               </NavLink>
-
             ))}
-
 
             {/* MOBILE PROJECTS */}
 
             <div className="mt-2 pt-2 border-t border-white/[0.06]">
-
               <button
                 type="button"
                 onClick={() => setProjectsOpen((value) => !value)}
                 className="w-full flex items-center justify-between px-4 py-3.5 rounded-xl text-sm font-medium text-ink-400 hover:text-ink-100 hover:bg-white/[0.035]"
               >
-
                 <span>
                   Project Links
                 </span>
 
                 <span
-                  className={`transition-transform ${projectsOpen ? 'rotate-180' : ''}`}
+                  className={`transition-transform ${
+                    projectsOpen ? 'rotate-180' : ''
+                  }`}
                 >
                   ▼
                 </span>
-
               </button>
 
-
               {projectsOpen && (
-
                 <div className="px-2 pb-2">
-
                   {projectLinks.map((project) => {
-
                     if (project.href) {
                       return (
                         <a
@@ -561,7 +496,6 @@ export default function Navbar() {
                           rel="noopener noreferrer"
                           className="block px-3 py-3 rounded-lg hover:bg-white/[0.04]"
                         >
-
                           <div className="text-xs text-ink-200">
                             {project.label}
                           </div>
@@ -569,7 +503,6 @@ export default function Navbar() {
                           <div className="text-[10px] text-ink-600 mt-1">
                             {project.description}
                           </div>
-
                         </a>
                       )
                     }
@@ -580,7 +513,6 @@ export default function Navbar() {
                         to={project.to}
                         className="block px-3 py-3 rounded-lg hover:bg-white/[0.04]"
                       >
-
                         <div className="text-xs text-ink-200">
                           {project.label}
                         </div>
@@ -588,32 +520,23 @@ export default function Navbar() {
                         <div className="text-[10px] text-ink-600 mt-1">
                           {project.description}
                         </div>
-
                       </Link>
                     )
                   })}
-
                 </div>
-
               )}
-
             </div>
-
 
             {/* MOBILE CTA */}
 
             <div className="mt-3 pt-3 border-t border-white/[0.06]">
-
               <div className="flex items-center gap-2 px-3 mb-3">
-
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(95,240,220,.8)]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(95,240,220,.8)]" />
 
                 <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-ink-600">
                   Currently accepting projects
                 </span>
-
               </div>
-
 
               <Button
                 to="/contact"
@@ -622,15 +545,10 @@ export default function Navbar() {
               >
                 Start a Project →
               </Button>
-
             </div>
-
           </nav>
-
         </div>
-
       </div>
-
     </header>
   )
 }
