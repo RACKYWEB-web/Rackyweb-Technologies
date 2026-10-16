@@ -1,9 +1,9 @@
 export const technologyStack = [
-  { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React'] },
-  { category: 'Backend', items: ['Python', 'Node.js', 'REST APIs'] },
+  { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'Next.js'] },
+  { category: 'Backend', items: ['Python', 'Node.js', 'REST APIs', 'FastAPI'] },
   { category: 'Database', items: ['PostgreSQL', 'Supabase'] },
   { category: 'Artificial Intelligence', items: ['Machine Learning', 'AI APIs', 'Python AI Ecosystem'] },
-  { category: 'Tools', items: ['Git', 'GitHub', 'VS Code'] },
+  { category: 'Tools', items: ['Git', 'GitHub', 'VS Code', 'cursor'] },
 ]
 
 export const processSteps = [
@@ -49,5 +49,5 @@ export const academy = {
     { id: 'c2', title: '[Ai and machine learning]', level: 'Beginner to advanced', placeholder: true },
     { id: 'c3', title: '[Git and github]', level: 'Beginner to advanced ', placeholder: true },
   ],
-  whatsappLink: 'https://wa.me/2347087806251',
+  whatsappLink: 'https://wa.me/2347087806251', 
 }

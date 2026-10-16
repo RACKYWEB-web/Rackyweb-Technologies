@@ -3,7 +3,7 @@ export const founder = {
   name: 'Edward Prince Akachukwu',
   role: 'Founder & Technology Developer',
   bio:
-    'Edward Prince Akachukwu is the founder of Rackyweb Technologies, a technology brand focused on building practical digital products, software and AI-powered solutions. His work combines software development, web technologies and artificial intelligence with a long-term vision of creating technology that solves real problems.',
+    'Edward Prince Akachukwu is the founder of Rackyweb Technologies, a technology brand focused on building practical digital products, software and AI-powered solutions. His work combines software development, web technologies and artificial intelligence with a long-term vision of creating technology that solves real problems and creates value for people.',
   skills: [
     'JavaScript',
     'React',
@@ -20,6 +20,7 @@ export const founder = {
     'Node.js',
     'Supabase',
     'Git',
+    'cursor',
   ],
   vision:
     'Build technology that is useful today, scalable tomorrow, and capable of reaching people anywhere in the world.',

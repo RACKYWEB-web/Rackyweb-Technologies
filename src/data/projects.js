@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     id: 'proj-5',
-    title: '[surprise birthday project]',
+    title: '[ birthday project]',
     category: 'web',
     description: '[A surprise birthday project for an honored man.]',
     technologies: ['React'],
