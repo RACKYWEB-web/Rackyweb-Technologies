@@ -9,7 +9,7 @@ export const projects = [
     category: 'Web',
     description: '[A business platform made for innovative companies.]',
     technologies: ['React', 'Vite', 'Tailwind CSS'],
-    link: 'https://rackyweb-web.github.io/rackyweb-global-media-/',
+    link: 'coming soon',
     placeholder: true,
   },
   {
