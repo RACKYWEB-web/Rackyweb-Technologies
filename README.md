@@ -12,21 +12,18 @@ Rackyweb Technologies helps businesses and individuals turn ideas into reliable,
 
 ## About Us
 
-Rackyweb Technologies is a technology company focused on building practical digital products. We combine clean design, modern engineering, and a clear understanding of what businesses need to grow online.
+Rackyweb Technologies is a technology company focused on building practical digital products. We combine clean design, modern engineering, and a clear understanding of what businesses need to grow online, and AI powered technologies and businesses.
 
 **Founder:** Edward Prince Akachukwu
 **Location:** Nigeria 🇳🇬
-**Founded:** [Year]
 
 ## What We Do
 
 - **Web Development:** fast, responsive websites and web applications
 - **AI & Automation:** AI-powered tools and automation that save businesses time
 - **Tech Consultations:** expert guidance on choosing and building the right technology
-- **[Add more services]**
+- **business consultations:** get the right idea for your business and right steps for it.
 - **Tech Academy:** training for beginners and aspiring developers
-
-> Add any other services from your Services page.
 
 ## Our Work
 
@@ -38,7 +35,27 @@ Rackyweb Technologies is a technology company focused on building practical digi
 
 - **Frontend:** React, Vite, React Router
 - **Styling:** Tailwind CSS
-- **Planned backend:** Supabase (contact form, academy registration, admin)
+- **Backend Integration:**
+
+Rackyweb Technologies uses Supabase for backend functionality related to its contact feature.
+
+Current implementation
+
+- Contact feature integration.
+- Backend services powered by Supabase, where configured.
+- Contact submissions are handled according to the application's configured workflow.
+
+Security
+
+- Supabase credentials are configured for the intended environment.
+- Database access should be protected using appropriate Row Level Security (RLS) policies.
+- Secret keys must never be exposed in client-side code.
+
+Future improvements
+
+- Improve contact submission management.
+- Add an administrative interface for managing enquiries, if required.
+- Expand backend functionality as the platform grows.
 - **Hosting:** GitHub Pages / Vercel / Netlify
 
 ## Getting Started
@@ -103,7 +120,7 @@ Have a project in mind? Reach out:
 
 - Email: edwardzethan792@gmail.com
 - WhatsApp: https://wa.me/2347087806251
-- Social: [add your social links]
+- tiktok: rackyweb technologies 
 
 ---
 
