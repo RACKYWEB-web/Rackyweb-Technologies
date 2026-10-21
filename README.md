@@ -12,7 +12,8 @@ Rackyweb Technologies helps businesses and individuals turn ideas into reliable,
 
 ## About Us
 
-Rackyweb Technologies is a technology company focused on building practical digital products. We combine clean design, modern engineering, and a clear understanding of what businesses need to grow online, and AI powered technologies and businesses.
+Rackyweb Technologies is a technology company focused on building practical digital products. We combine clean design, modern engineering, and a clear understanding of what businesses need to grow online, and AI powered technologies and businesses.Rackyweb Technologies  Building modern digital solutions, web applications, AI-powered tools, and innovative technology projects for the future.
+CODE . BUILD . DEPLOY 
 
 **Founder:** Edward Prince Akachukwu
 **Location:** Nigeria 🇳🇬
