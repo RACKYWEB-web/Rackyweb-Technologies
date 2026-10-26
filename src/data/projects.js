@@ -5,20 +5,20 @@ export const projectCategories = ['All', 'Web', 'AI', 'Software', 'Education', '
 export const projects = [
   {
     id: 'proj-1',
-    title: '[where business meets innovation]',
+    title: '[where business meets innovation coming soon]',
     category: 'Web',
     description: '[A business platform made for innovative companies.]',
     technologies: ['React', 'Vite', 'Tailwind CSS'],
-    link: 'coming soon',
+    link: '',
     placeholder: true,
   },
   {
     id: 'proj-2',
-    title: '[RackyGPT coming soon]',
-    category: 'AI',
-    description: '[RackyGPT from  the RackyAI company being under development is trained to help in daily life activities and also in the area of software technologies to guide to the right path.]',
-    technologies: ['Python', 'AI APIs'],
-    link: '',
+    title: '[Edwards portfolio]',
+    category: 'web',
+    description: '[Edwards portfolio the portfolio of the owner of rackyweb technologies designed as a biography and more precision to give a clearer view of who Edward is thank you as you go through it.]',
+    technologies: ['react', 'Tailwind css'],
+    link: 'https://rackyweb-web.github.io/Edward-portfolio/',
     placeholder: true,
   },
   {
